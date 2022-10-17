@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-
+import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity,ImageBackground } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -53,6 +53,14 @@ const Login = ({navigation}) => {
     <View style={styles.container}>
         <Text>LOGIN</Text>
         <br></br>
+        {/* <ImageBackground source={{uri:'https://images.pexels.com/photos/11806779/pexels-photo-11806779.jpeg?auto=compress&cs=tinysrgb&w=400'}}
+            style={{width:400, height:400}}
+            >
+<LinearGradient     colors={['rgba(0, 0, 0, 0) 69.79%', '#070627']}
+          style={{ padding: 205, alignItems: 'center', borderRadius: 5 }}>
+
+</LinearGradient>
+            </ImageBackground> */}
         <View>
             {errMsg === '' ? (<Text style={styles.goodErr}>message</Text>) : (<Text style={styles.badErr}>{errMsg}</Text>)}
         </View>
@@ -69,7 +77,7 @@ const Login = ({navigation}) => {
             <br></br>
 <View style={styles.lgn}>
             <TouchableOpacity  onPress={loginWithEmail} >
-            <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:10,padding:10}}>Login</Text>
+            <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}}>Login</Text>
             </TouchableOpacity>
          </View>
          <br></br>
@@ -78,7 +86,7 @@ const Login = ({navigation}) => {
                 <br></br>
                 <View style={styles.register }>
                 <TouchableOpacity  title='Register' onPress={() => navigation.navigate('Register')} >
-                <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:10,padding:10}}>Register</Text>
+                <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}}>Register</Text>
                 </TouchableOpacity>
 </View>
         
@@ -105,7 +113,7 @@ const styles = StyleSheet.create({
         color: '#ffffff',
     },
     text:{
-        backgroundColor:'gray',
+        backgroundColor:'#fff',
         width:250,
         height:40 ,
         borderRadius:10

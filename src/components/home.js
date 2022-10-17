@@ -1,32 +1,5 @@
-// import React from 'react';
-// import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, TextInput, TouchableOpacity, View ,Image} from 'react-native';
 
-// const Home = ({})=>{
-   
-//     return (
-// <View style={styles.container}>
-    
-//     <TextInput placeholder='search here' />
-//     <View style={styles.products}>
-//         <Image  />
-
-//     </View>
-    
-// </View>
-//     );
-//   }
-  
-//   const styles = StyleSheet.create({
-//     container: {
-//       flex: 1,
-//       backgroundColor: '#fff',
-//       alignItems: 'center',
-//       justifyContent: 'center',
-//     },
-//   });
-//   export default Home;
-import React from 'react';
+import React, { useState } from 'react';
 import{ StyleSheet,
 		Text,
 		View,
@@ -34,124 +7,298 @@ import{ StyleSheet,
         TextInput,Image
 	} from 'react-native';
 
-import SearchBar from 'react-native-elements/dist/searchbar/SearchBar-default';
+// import SearchBar from 'react-native-elements/dist/searchbar/SearchBar-default';
+import { TouchableOpacity } from 'react-native-web';
 
 
 
-const DATA = [
-{
-	id:"1",
-	title:"SALADS",
-},
-{
-	id:"2",
-	title:"BURGER",
+const Home=({navigation}) =>{
+	 const [search,setSearch] =useState("");
 
-},
-{
-	id:"3",
-	title:"DRINKS",
+     return (
+         <View style={styles.container} >
+			<View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Image
+                style={{
+                  width: 60,
+                  height: 70,
+                  borderRadius:100,
+                  marginRight: 30,
+                }}
+                source={require("../../assets/resturant/matshepo.jpg")}
+              />
 
-},
-
-];
-
-const Item = ({title}) => {
-return(
-	<View style={styles.item}  >
-		<View>
-
-		</View>
-		<View style={styles.eye}>
-			<Image source={{uri:'https://images.pexels.com/photos/1453713/pexels-photo-1453713.jpeg?auto=compress&cs=tinysrgb&w=300'}}/>
-	
-		</View>
-
-	<Text>{title}</Text>
-   
-    
-
-	</View>
-);
-}
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontWeight: "800",
+                
+                }}
+              >
+                welcome to mi resturant
+              </Text>
+            </View>
+			<br></br>
+			
+	 <TextInput style={styles.searchInput} placeholder="search here" />
 
 
-export default function App() {
-	
+<br></br>
+<Text style={{fleDecoration:'column' , justifyContent:'center',alignItems:'center',marginBottom: 10,justifyContent:'space-between',textDecorationStyle:'solid',backgroundColor:'black',color:'#fff',borderRadius:20}}>Most Popular</Text>
+<View style={{flex: 1, 
+                flexDirection: "row",
+                borderTopLeftRadius: 30, 
+                borderTopRightRadius: 30,
+				borderBottomLeftRadius:30,
+				borderBottomRightRadius:30,
+                backgroundColor:'white',
+				}}>
 
-const renderItem = ({item})=>(
-<Item title={item.title}/>
+	<Image
+                style={{
+                  width: 60,
+                  height: 70,
+                  borderRadius:100,
+                  marginRight: 30,
+				  fleDecoration:'column'
+                }}
+                source={require("../../assets/resturant/pexels-photo-327158.jpeg")}
+              />
+			  {/* <Text>PRICE :R50</Text>
+			  <Text>NAME OF THE SALAD</Text> */}
 
-
-);
-return (
-<View style={styles.container}>
-    
-<SearchBar
-    placeholder="Type Here..."
-    lightTheme
-    round
-    autoCorrect={false} 
-
-   
-/>
-	<FlatList
-	data={DATA}
-	renderItem={renderItem}
-	keyExtractor={item => item.id}
-	
-	/>
-    <View style={styles.add}>
-  
-   </View>
-   {/* <View style={styles.order }>
-                <TouchableOpacity  title='Register' onPress={() => navigation.navigate('Register')} >
-                <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:10,padding:10}}>Register</Text>
-                </TouchableOpacity>
-</View> */}
- 
+			  <br></br>
+			  	<Image
+                style={{
+                  width: 60,
+                  height: 70,
+                  borderRadius:100,
+                  marginRight: 30,
+                }}
+                source={require("../../assets/resturant/pexels-photo-1633578.jpeg")}
+              />
+			    	<Image
+                style={{
+                  width: 60,
+                  height: 70,
+                  borderRadius:100,
+                  marginRight: 30,
+                }}
+                source={require("../../assets/resturant/pexels-photo-315755.jpeg")}
+              />
+			    	<Image
+                style={{
+                  width: 60,
+                  height: 70,
+                  borderRadius:100,
+                  marginRight: 30,
+                }}
+                source={require("../../assets/resturant/pexels-photo-1410235.jpeg")}
+              />
 </View>
-);
-}
 
-const styles = StyleSheet.create({
-container: {
-    backgroundColor:'#fff',
-	marginTop:30,
-	padding:2,
-	maxHeight:'840',
-	maxWidth:1000,
-	borderRadius:10
-},
-item: {
-	backgroundColor: 'skyblue',
-	padding: 20,
-	marginVertical: 8,
-	marginHorizontal: 16,
-    borderRadius:10
-},
-input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-    borderRadius:10
-  },
-  add:{
-	marginLeft:250,
-	color:'#98EDC3',
+ <View style={{flex: 1, 
+                flexDirection: "row",
+                borderTopLeftRadius: 30, 
+                borderTopRightRadius: 30,
+                backgroundColor:'white'}}>
 
-  },
-  eye:{
-	color:'black',
+		<View style={{flex: 2, flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
+     <Text style={{justifyContent:'center',alignItems:'center',marginBottom: 10,justifyContent:'space-between'}}>Meal Deals</Text>
 
-  },
-  total:{
-	backgroundColor:"green"
-  },
-  stock:{
-	backgroundColor:'#fff',
-  }
-  
+	 <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+				flex:1,
+                justifyContent: "space-between",
+				height:200,
+				width:200,
+				justifyContent:'space-between',
+				borderRadius:20,
+	
+              }} source={require("../../assets/resturant/yoav-aziz-AiHJiRCwB3w-unsplash.jpeg")}
+		
+			  />
+
+
+<Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:200,
+				width:200,
+				justifyContent:'space-between',
+				borderRadius:20
+              }} source={require("../../assets/resturant/pexels-julie-aagaard-2097090.jpeg")}
+			  />
+			  <br></br>
+			  <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }}
+			   source={require("../../assets/resturant/pexels-cottonbro-3297801.jpg")}
+			  />
+			  
+</View>
+</View>
+
+<br></br>
+<View style={{flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
+        <Text style={{justifyContent:'center',alignItems:'center'}}>BURGER</Text>
+		<Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }} 
+			  source={require("../../assets/resturant/pexels-photo-327158.jpeg")}
+			  />
+			  <br></br>
+			  <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }}
+			   source={require("../../assets/resturant/pexels-photo-1633578.jpeg")}
+			  />
+			  
+			  <br></br>
+			  <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }}  source={require("../../assets/resturant/pexels-photo-3630141.webp")}
+		
+			  />
+			  
+	 </View>
+	 <br></br>
+	 <br></br>
+	 <br></br>
+	 <View style={{flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
+     <Text style={{justifyContent:'center',alignItems:'center'}}>DRINKS</Text>
+	 <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }} 
+			  source={require("../../assets/resturant/pexels-photo-338713.webp")}
+			  />
+			  <br></br>
+			  <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+              }}
+			   source={require("../../assets/resturant/pexels-photo-602750.jpeg")}
+			  />
+			  {/* <Text>Alcohol</Text> */}
+			 <br></br> 
+			
+			 <Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+                justifyContent: "space-between",
+				height:100,
+				width:190,
+				justifyContent:'space-between',
+				borderRadius:20
+				
+              }} 
+			  source={require("../../assets/resturant/pexels-photo-1564534.webp")}
+			  />
+			{/* <Text>cockTAIL</Text>   */}
+    </View>
+	<br></br>
+	<br></br>
+	<View style={styles.lgn}>
+            <TouchableOpacity  onPress={() => navigation.navigate('Card')} >
+            <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}} >You Can Order now</Text>
+            </TouchableOpacity>
+         </View>
+ </View>
+	 )
+ }
+
  
-});
+const styles = StyleSheet.create({
+    container: {       flex: 1,
+      backgroundColor: '#fff',
+       alignItems: 'center',
+       justifyContent: 'center',
+	   maxWidth:1000,
+	   maxHeight:2000,
+	   height:650,
+	   width:890,
+	   width:'100%',
+	   height:50,
+	
+	   borderRadius:8,
+	  
+
+     },
+ 
+     salads:{
+         backgroundColor:'#DFF1F3',
+         alignItems:'center',
+         borderRadius:10,
+		 paddingLeft:30
+
+    },
+     burgers:{
+         backgroundColor:'#DFF1F3',
+         alignItems:'center',
+         borderRadius:10,
+         paddingLeft:20
+
+     },
+     drinks:{
+       backgroundColor:'#DFF1F3',
+         alignItems:'center',
+         borderRadius:10,
+     },
+     btn:{
+     marginBottom:100
+    },
+	searchInput :{
+		width:300,
+		height:30,
+		paddingLeft:8,
+		fontSize:16,
+		borderRadius:10
+	},
+	categories:{
+		backgroundColor:'#DFF1F3'
+
+		
+}
+	
+   });
+
+export default Home
+
+
