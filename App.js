@@ -33,9 +33,12 @@ export default function App() {
         <Stack.Screen  name='Home' options={{title:'Home'}}>
           {(props) => <Home {...props} /> } 
         </Stack.Screen> 
+
         <Stack.Screen  name='Card' options={{title:'Card'}}>
-          {(props) => <Card {...props} /> } 
+         {(props) => <Card {...props} />}
         </Stack.Screen> 
+        
+      
         
        
 

@@ -63,6 +63,7 @@ const Register = ({navigation}) => {
         {errMsg !== '' ? (<View><Text style={styles.badErr}>{errMsg}</Text></View>) : (<View><Text style={styles.goodErr}>message</Text></View>) }
         <View>
             <View>
+
                 <Text>Email</Text>
                 <TextInput onChangeText={value => setEmail(value)} style={styles.text} />
             </View>
@@ -78,12 +79,14 @@ const Register = ({navigation}) => {
             </View>
             <br></br>
             <TouchableOpacity title='Register' onPress={registerWithEmail} >
-                <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}}>Register</Text></TouchableOpacity>
+                <Text style={{color:'black',backgroundColor:'#0faf9a',width:189,height:40, borderRadius:35,
+        borderRadius: 10,padding:10}}>Register</Text></TouchableOpacity>
                 <br></br>
             <View>
                 <Text>Already have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')} >
-                    <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}}>Login</Text></TouchableOpacity>
+                    <Text style={{color:'black',backgroundColor:'#0faf9a',width:189,height:40, borderRadius:35,
+        borderRadius: 10,padding:10}}>Login</Text></TouchableOpacity>
             </View>
 
         </View>
@@ -98,6 +101,7 @@ const styles = StyleSheet.create({
         flex:2,
         justifyContent:'center',
         alignItems:'center',
+        backgroundColor:'#f0ffff'
     },
     badErr: {
         backgroundColor: '#ff0000',

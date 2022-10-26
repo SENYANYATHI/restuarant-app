@@ -18,6 +18,7 @@ const Home=({navigation}) =>{
      return (
          <View style={styles.container} >
 			<View style={{ flexDirection: "row", alignItems: "center" }}>
+       
               <Image
                 style={{
                   width: 60,
@@ -53,7 +54,7 @@ const Home=({navigation}) =>{
 				borderBottomRightRadius:30,
                 backgroundColor:'white',
 				}}>
-
+ <TouchableOpacity style={{with:60, marginBottom:20}} >
 	<Image
                 style={{
                   width: 60,
@@ -67,7 +68,9 @@ const Home=({navigation}) =>{
 			  {/* <Text>PRICE :R50</Text>
 			  <Text>NAME OF THE SALAD</Text> */}
 
-			  <br></br>
+</TouchableOpacity>
+
+<TouchableOpacity style={{with:60, marginBottom:20}} >
 			  	<Image
                 style={{
                   width: 60,
@@ -77,6 +80,10 @@ const Home=({navigation}) =>{
                 }}
                 source={require("../../assets/resturant/pexels-photo-1633578.jpeg")}
               />
+
+</TouchableOpacity>
+
+<TouchableOpacity style={{with:60, marginBottom:20}} >
 			    	<Image
                 style={{
                   width: 60,
@@ -86,6 +93,9 @@ const Home=({navigation}) =>{
                 }}
                 source={require("../../assets/resturant/pexels-photo-315755.jpeg")}
               />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={{with:60, marginBottom:20}} >
 			    	<Image
                 style={{
                   width: 60,
@@ -94,8 +104,11 @@ const Home=({navigation}) =>{
                   marginRight: 30,
                 }}
                 source={require("../../assets/resturant/pexels-photo-1410235.jpeg")}
+                
               />
+              </TouchableOpacity>
 </View>
+
 
  <View style={{flex: 1, 
                 flexDirection: "row",
@@ -105,8 +118,8 @@ const Home=({navigation}) =>{
 
 		<View style={{flex: 2, flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
      <Text style={{justifyContent:'center',alignItems:'center',marginBottom: 10,justifyContent:'space-between'}}>Meal Deals</Text>
-
-	 <Image  style={{
+<TouchableOpacity>
+<Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
 				flex:1,
@@ -119,8 +132,26 @@ const Home=({navigation}) =>{
               }} source={require("../../assets/resturant/yoav-aziz-AiHJiRCwB3w-unsplash.jpeg")}
 		
 			  />
+</TouchableOpacity>
 
+<TouchableOpacity>
+<Image  style={{
+                paddingLeft:10,
+                flexDirection: "row",
+				flex:1,
+                justifyContent: "space-between",
+				height:200,
+				width:200,
+				justifyContent:'space-between',
+				borderRadius:20,
+	
+              }} source={require("../../assets/resturant/yoav-aziz-AiHJiRCwB3w-unsplash.jpeg")}
+		
+			  />
+</TouchableOpacity>
+	
 
+<TouchableOpacity>
 <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
@@ -131,8 +162,11 @@ const Home=({navigation}) =>{
 				borderRadius:20
               }} source={require("../../assets/resturant/pexels-julie-aagaard-2097090.jpeg")}
 			  />
+</TouchableOpacity>
+
 			  <br></br>
-			  <Image  style={{
+        <TouchableOpacity>
+        <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -143,6 +177,8 @@ const Home=({navigation}) =>{
               }}
 			   source={require("../../assets/resturant/pexels-cottonbro-3297801.jpg")}
 			  />
+        </TouchableOpacity>
+		
 			  
 </View>
 </View>
@@ -150,7 +186,8 @@ const Home=({navigation}) =>{
 <br></br>
 <View style={{flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
         <Text style={{justifyContent:'center',alignItems:'center'}}>BURGER</Text>
-		<Image  style={{
+        <TouchableOpacity>
+        <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -161,8 +198,11 @@ const Home=({navigation}) =>{
               }} 
 			  source={require("../../assets/resturant/pexels-photo-327158.jpeg")}
 			  />
+        </TouchableOpacity>
+
 			  <br></br>
-			  <Image  style={{
+        <TouchableOpacity>
+        <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -173,9 +213,12 @@ const Home=({navigation}) =>{
               }}
 			   source={require("../../assets/resturant/pexels-photo-1633578.jpeg")}
 			  />
+        </TouchableOpacity>
+			 
 			  
 			  <br></br>
-			  <Image  style={{
+        <TouchableOpacity>
+        <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -186,6 +229,8 @@ const Home=({navigation}) =>{
               }}  source={require("../../assets/resturant/pexels-photo-3630141.webp")}
 		
 			  />
+        </TouchableOpacity>
+		
 			  
 	 </View>
 	 <br></br>
@@ -193,7 +238,8 @@ const Home=({navigation}) =>{
 	 <br></br>
 	 <View style={{flexDirection:'row',justifyContent:"space-between",alignItems:'center'}}>
      <Text style={{justifyContent:'center',alignItems:'center'}}>DRINKS</Text>
-	 <Image  style={{
+     <TouchableOpacity>
+     <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -204,8 +250,11 @@ const Home=({navigation}) =>{
               }} 
 			  source={require("../../assets/resturant/pexels-photo-338713.webp")}
 			  />
+     </TouchableOpacity>
+
 			  <br></br>
-			  <Image  style={{
+        <TouchableOpacity>
+        <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -216,10 +265,12 @@ const Home=({navigation}) =>{
               }}
 			   source={require("../../assets/resturant/pexels-photo-602750.jpeg")}
 			  />
+        </TouchableOpacity>
+		
 			  {/* <Text>Alcohol</Text> */}
 			 <br></br> 
-			
-			 <Image  style={{
+			<TouchableOpacity>
+      <Image  style={{
                 paddingLeft:10,
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -231,13 +282,15 @@ const Home=({navigation}) =>{
               }} 
 			  source={require("../../assets/resturant/pexels-photo-1564534.webp")}
 			  />
+      </TouchableOpacity>
+		
 			{/* <Text>cockTAIL</Text>   */}
     </View>
 	<br></br>
 	<br></br>
 	<View style={styles.lgn}>
             <TouchableOpacity  onPress={() => navigation.navigate('Card')} >
-            <Text style={{color:'black',backgroundColor:'skyblue',width:189,height:40,borderRadius:20,padding:10}} >You Can Order now</Text>
+            <Text style={{color:'black',backgroundColor:'#0faf9a',width:189,height:40,borderRadius:20,padding:10}} >You Can Order now</Text>
             </TouchableOpacity>
          </View>
  </View>
